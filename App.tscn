@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjl534rv1h1hr"]
+
+[ext_resource type="PackedScene" uid="uid://dyxowejj7krgf" path="res://TitleScreen.tscn" id="1_e1rpr"]
+[ext_resource type="Script" uid="uid://diy67g7hvrcwj" path="res://App.gd" id="1_la6et"]
+[ext_resource type="PackedScene" uid="uid://bv5yski2rmow4" path="res://MainMenu.tscn" id="2_la6et"]
+[ext_resource type="PackedScene" uid="uid://y2ly6g7dw6o4" path="res://SettingsScreen.tscn" id="4_la6et"]
+[ext_resource type="PackedScene" uid="uid://cxa3nrny4w2d3" path="res://VaultScreen.tscn" id="5_7tsuj"]
+
+[node name="App" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_la6et")
+
+[node name="Screens" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsScreen" parent="Screens" instance=ExtResource("4_la6et")]
+visible = false
+layout_mode = 1
+
+[node name="VaultScreen" parent="Screens" instance=ExtResource("5_7tsuj")]
+visible = false
+layout_mode = 1
+
+[node name="MainMenu" parent="Screens" instance=ExtResource("2_la6et")]
+visible = false
+layout_mode = 1
+
+[node name="TitleScreen" parent="Screens" instance=ExtResource("1_e1rpr")]
+layout_mode = 1
+
+[node name="GameHost" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

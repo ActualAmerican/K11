@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bv5yski2rmow4"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.69039017, 0.33325806, 0.3966796, 1)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="V" type="VBoxContainer" parent="Center"]
+layout_mode = 2
+
+[node name="MenuLabel" type="Label" parent="Center/V"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="BeginRunButton" type="Button" parent="Center/V"]
+layout_mode = 2
+text = "Begin Run"
+
+[node name="VaultButton" type="Button" parent="Center/V"]
+layout_mode = 2
+text = "Vault"
+
+[node name="SettingsButton" type="Button" parent="Center/V"]
+layout_mode = 2
+text = "Settings"
